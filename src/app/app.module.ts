@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { CardsModule } from './cards/cards.module'
 
 import { AngularFireModule } from 'angularfire2'
 import { AngularFirestoreModule } from 'angularfire2/firestore'
@@ -14,6 +15,7 @@ import { environment } from '../environments/environment'
     ],
     imports: [
         BrowserModule,
+        CardsModule,
         AppRoutingModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule
