@@ -1,11 +1,2 @@
-* {
-    box-sizing: border-box;
-}
-
-.form-group {
-    display: block;
-}
-
-.input {
-    width: 100%;
-}
+@import "./assets/scss/base/body";
+@import "./assets/scss/components/form";
