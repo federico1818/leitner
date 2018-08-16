@@ -1,0 +1,18 @@
+.menu-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    flex-grow: 1;
+}
+
+.menu-link {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-link.active {
+    border-bottom: 3px solid;
+}

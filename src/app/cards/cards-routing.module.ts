@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
-import { CardComponent } from './card/card.component'
+import { CardCreateComponent } from './card-create/card-create.component'
+import { CardListComponent } from './card-list/card-list.component'
 
 const routes: Routes = [
     {
         path: 'cards',
-        component: CardComponent,
+        children: [
+            {
+                path: '',
+                component: CardListComponent,
+            },
+            {
+                path: 'create',
+                component: CardCreateComponent,
+            },
+        ]
     },
 ]
 

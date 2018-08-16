@@ -1,7 +1,9 @@
 @import "./assets/scss/themes/colors";
 @import "./assets/scss/themes/sizes";
 
+@import "./assets/scss/base/reset";
 @import "./assets/scss/base/body";
 
 @import "./assets/scss/components/header";
+@import "./assets/scss/components/main";
 @import "./assets/scss/components/form";
