@@ -21,6 +21,7 @@ export class CardService {
     }
 
     save(card: Card) {
-        this.cardsCollection.add(card)
+        let data = Object.assign({}, card)
+        return this.cardsCollection.add(data)
     }
 }
