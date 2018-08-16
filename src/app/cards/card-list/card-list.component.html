@@ -1,5 +1,5 @@
 <ul>
-    <li>
-        <app-card></app-card>
+    <li *ngFor="let card of cards | async">
+        <app-card [data]="card"></app-card>
     </li>
 </ul>

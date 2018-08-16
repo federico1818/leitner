@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { CardService } from './../shared/card.service'
+import { Component, OnInit, Input } from '@angular/core'
+import { Card } from './../shared/card'
 
 @Component({
     selector: 'app-card',
@@ -8,8 +8,9 @@ import { CardService } from './../shared/card.service'
 })
 
 export class CardComponent implements OnInit {
-    
-    constructor(private service: CardService) { }
+    @Input() data: Card
+
+    constructor() { }
 
     ngOnInit() {
         
