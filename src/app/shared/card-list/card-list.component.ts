@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 import { Observable } from 'rxjs'
-import { CardService } from './../services/card.service'
 import { Card } from './../models/card'
 
 @Component({
@@ -10,11 +9,10 @@ import { Card } from './../models/card'
 })
 
 export class CardListComponent implements OnInit {
-    public cards: Observable<Card[]>
+    @Input() cards: Observable<Card[]>
     
-    constructor(private service: CardService) { }
+    constructor() { }
 
     ngOnInit() {
-        this.cards = this.service.all()
     }
 }
