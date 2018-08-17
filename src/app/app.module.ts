@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { SharedModule } from './shared/shared.module'
 import { CardsModule } from './cards/cards.module'
 import { BoxesModule } from './boxes/boxes.module'
 
@@ -18,6 +19,7 @@ import { MenuComponent } from './menu/menu.component'
     ],
     imports: [
         BrowserModule,
+        SharedModule,
         BoxesModule,
         CardsModule,
         AppRoutingModule,

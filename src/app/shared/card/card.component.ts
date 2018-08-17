@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
-import { Card } from './../shared/card'
+import { Card } from './../models/card'
 
 @Component({
     selector: 'app-card',
@@ -12,8 +12,6 @@ export class CardComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() {
-        
+    ngOnInit() {   
     }
-
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
-import { CardService } from './../shared/card.service'
-import { Card } from './../shared/card'
+import { Card } from './../../shared/models/card'
+import { CardService } from './../../shared/services/card.service'
 
 @Component({
     selector: 'app-card-form',

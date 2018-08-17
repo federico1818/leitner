@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { Observable } from 'rxjs'
 import { switchMap } from 'rxjs/operators'
-import { CardService } from './../../cards/shared/card.service'
-import { Card } from './../../cards/shared/card'
+import { CardService } from './../../shared/services/card.service'
+import { Card } from './../../shared/models/card'
 
 @Component({
     selector: 'app-box',
@@ -18,6 +18,6 @@ export class BoxComponent implements OnInit {
 
     ngOnInit() {
         let number = +this.route.snapshot.paramMap.get('number')
-        this.cards = this.service.findByBox(number)
+        this.cards = this.service.all()
     }
 }
