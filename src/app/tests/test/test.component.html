@@ -1,3 +1,7 @@
 <div>
-    <app-card [data]="card | async"></app-card>
+    <app-card [data]="card"></app-card>
+    <div>
+        <button (click)="incorrect()">Incorrect</button>
+        <button (click)="correct()">Correct</button>
+    </div>
 </div>

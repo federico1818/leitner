@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore'
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore'
 import { Observable } from 'rxjs'
 import { Card } from './../models/card'
 
@@ -8,6 +8,7 @@ import { Card } from './../models/card'
 })
 
 export class CardService {
+    private card: AngularFirestoreDocument<Card>
     private cardsCollection: AngularFirestoreCollection<Card>
     private cards: Observable<Card[]>
     private collection: string = 'cards'
@@ -32,6 +33,12 @@ export class CardService {
 
     getById(id: string) {
         return this.afs.collection<Card>(this.collection).doc<Card>(id).valueChanges()
+    }
+
+    update(id: string, card: Card) {
+        let data = Object.assign({}, card)
+        this.card = this.afs.doc<Card>(`${this.collection}/${id}`)
+        return this.card.update(data)
     }
 
 }

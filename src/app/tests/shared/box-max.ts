@@ -1,0 +1,1 @@
+export const boxMax = 4
