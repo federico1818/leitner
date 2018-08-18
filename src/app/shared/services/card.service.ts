@@ -30,5 +30,8 @@ export class CardService {
         return this.afs.collection<Card>(this.collection, ref => ref.where("box", "==", box)).valueChanges()
     }
 
+    getById(id: string) {
+        return this.afs.collection<Card>(this.collection).doc<Card>(id).valueChanges()
+    }
 
 }

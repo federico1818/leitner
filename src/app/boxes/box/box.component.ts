@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { Observable } from 'rxjs'
-import { switchMap } from 'rxjs/operators'
 import { CardService } from './../../shared/services/card.service'
 import { Card } from './../../shared/models/card'
 
