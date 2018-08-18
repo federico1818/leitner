@@ -18,6 +18,6 @@ export class BoxComponent implements OnInit {
 
     ngOnInit() {
         let number = +this.route.snapshot.paramMap.get('number')
-        this.cards = this.service.all()
+        this.cards = this.service.findByBox(number)
     }
 }

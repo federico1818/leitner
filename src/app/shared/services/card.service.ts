@@ -27,6 +27,8 @@ export class CardService {
     }
 
     findByBox(box: number) {
-        /*return this.afs.collection<Card>(this.collection, ref => ref.where('box', '==', box)).valueChanges()*/
+        return this.afs.collection<Card>(this.collection, ref => ref.where("box", "==", box)).valueChanges()
     }
+
+
 }

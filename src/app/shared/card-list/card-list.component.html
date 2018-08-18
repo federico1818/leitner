@@ -1,5 +1,10 @@
-<ul>
-    <li *ngFor="let card of cards">
-        <app-card [data]="card"></app-card>
-    </li>
-</ul>
+<div>
+    <div *ngIf="cards?.length == 0">
+        There are not cards
+    </div>
+    <ul *ngIf="cards">
+        <li *ngFor="let card of cards">
+            <app-card [data]="card"></app-card>
+        </li>
+    </ul>
+</div>
