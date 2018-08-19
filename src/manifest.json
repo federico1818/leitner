@@ -1,0 +1,10 @@
+{
+    "short_name": "Leitner",
+    "name": "Leitner",
+    "start_url": "/",
+    "theme_color": "#007ac1",
+    "background_color": "#03a9f4",
+    "display": "standalone",
+    "orientation": "portrait",
+    "gcm_sender_id": "103953800507"
+}
