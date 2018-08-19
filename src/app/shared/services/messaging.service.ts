@@ -18,7 +18,9 @@ export class MessagingService {
         .then(() => {
             console.log('Permission granted')
             return this.messaging.getToken()
-        }).catch((err) => {
+        }).then(token => {
+            console.log(token)
+        }).catch(err => {
             console.error(err)
         })
     }

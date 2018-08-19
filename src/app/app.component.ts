@@ -12,5 +12,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.service.requestPermission()
+        this.service.receiveMessage()
     }
 }
