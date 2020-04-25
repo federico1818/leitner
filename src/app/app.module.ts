@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
+import { AngularFireModule } from '@angular/fire'
+import { environment } from '../environments/environment'
+
 import { MaterialModule } from './material/material.module'
 
 import { AppRoutingModule } from './app-routing.module'
@@ -17,6 +20,7 @@ import { CardModule } from './card/card.module'
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
         MaterialModule,
         AppRoutingModule,
         SharedModule,
